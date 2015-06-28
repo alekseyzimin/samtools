@@ -12,7 +12,6 @@
 /misc/md5sum-lite
 /misc/wgsim
 /samtools
-m4/
 *.in
 *.m4
 *~
