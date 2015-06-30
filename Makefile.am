@@ -2,8 +2,8 @@ ACLOCAL_AMFLAGS = -I m4
 bin_PROGRAMS = samtools
 lib_LTLIBRARIES = libbam.la bcftools/libbcf.la
 
-AM_CPPFLAGS = -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_USE_KNETFILE -D_CURSES_LIB=1
-AM_LDADD = -lcurses -lm -lz -lpthread
+AM_CPPFLAGS = -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_USE_KNETFILE -D_CURSES_LIB=@CURSES_LIB@
+AM_LDADD = -lm -lz -lpthread
 
 library_includedir = $(includedir)/samtools
 library_include_HEADERS = bam.h bam2bcf.h bam_endian.h bgzf.h		\

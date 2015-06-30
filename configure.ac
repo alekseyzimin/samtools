@@ -9,5 +9,10 @@ AC_CONFIG_HEADERS([config.h])
 AC_PROG_LIBTOOL
 AC_PROG_CC
 
+# Check for curses
+AC_SEARCH_LIBS([initscr], [ncurses curses], [CURSES_LIB=1], [CURSES_LIB=0])
+AC_SUBST([CURSES_LIB])
+
+
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
